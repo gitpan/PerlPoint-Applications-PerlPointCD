@@ -1,0 +1,191 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0029.htm">
+  <link rel="prev"     href="jslide0037.htm">
+  <link rel="next"     href="jslide0039.htm">
+  <link rel="up"       href="jslide0028.htm">
+  <link rel="last"     href="jslide0052.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Highlight examples</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0038.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+                    Next: <a href="jslide0039.htm">Import filters can be added</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0037.htm">Title shortcuts</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Highlight examples">
+<center>
+<H1>Highlight examples
+</H1></center>
+
+
+<P>
+<A name="index_38_324"></A>
+</P>
+
+
+<P>
+Mostly for examples, it can be of interest that it is easy to <I><A name="index_38_325"></A>highlight</I> Perl comments in a paragraph. (Of course this applies to all languages using <CODE><A name="index_38_326"></A>#</CODE> to mark comments.) Just add <CODE><A name="index_38_327"></A>||co||</CODE> to the paragraph.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=red>||co||</FONT>  # call function
+    $rc=function($arg);</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+This becomes
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green># call function</FONT>
+  $rc=function($arg);</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+This is called a <I><A name="index_38_328"></A>PerlPoint paragraph filter</I>. Please note that the paragraph itself (after the filter prefix) should begin as usual - the example paragraph <I>needs</I> to start with whitespaces, still.
+</P>
+
+
+<P>
+Several filters can be chained:
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <I>||co<FONT COLOR=red>|</FONT>c||</I> # call function
+    $rc=function($arg);
+
+    # <CODE>c</CODE> is <A HREF="jslide0033.htm#Center paragraphs">another predeclared filter</A>.</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+Paragraph filters are Perl functions. The implementation of <CODE>co()</CODE> is really straight forward, so it does not work in every case, but mostly. But it can relieve an author from many keystrokes and keeps the examples actually unchanged, so it is worth to try it out.
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="jslide0033.htm#Center paragraphs">Center paragraphs</A>  </li>   <li>  <A HREF="jslide0036.htm#Directory order">Directory order</A>  </li>   <li>  <A HREF="jslide0040.htm#Index">Index</A>  </li> 
+</UL>
+
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0039.htm">Import filters can be added</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0037.htm">Title shortcuts</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

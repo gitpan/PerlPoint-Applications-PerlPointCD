@@ -1,0 +1,208 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0029.htm">
+  <link rel="prev"     href="jslide0041.htm">
+  <link rel="next"     href="jslide0043.htm">
+  <link rel="up"       href="jslide0028.htm">
+  <link rel="last"     href="jslide0052.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Language support</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0042.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+                    Next: <a href="jslide0043.htm">Module index</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0041.htm">Integrating images</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Language support">
+<center>
+<H1>Language support
+</H1></center>
+
+
+<P>
+<A name="index_42_358"></A>
+</P>
+
+
+<P>
+Not all CD text in generated pages is produced from source files. There are phrases that are inserted automatically, like <I>&quot;Proceedings&quot;</I> as title of the link generated to a speakers additional materials.
+</P>
+
+
+<P>
+The language these texts are written in is set by a <A name="index_42_359"></A><CODE>makefile</CODE> macro <CODE><A name="index_42_360"></A>DEFAULT_LANGUAGE</CODE>. It is optional and defaults to <CODE><A name="index_42_361"></A>en</CODE>, which means English. As this tool was developed for the <A name="index_42_362"></A><A HREF="http://www.perlworkshop.de" target="_blank">German Perl Workshop</A>, the second language setting currently supported is <CODE><A name="index_42_363"></A>de</CODE> (for German). More languages can be easily added on request.
+</P>
+
+
+<P>
+So a call of <CODE><A name="index_42_364"></A>make</CODE> can use this macro to configure the default language settting:
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  make <FONT COLOR=red>DEFAULT_LANGUAGE=de</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+If this is a permanent setting for a project, it is easier to edit this setting inside the <CODE><A name="index_42_365"></A>makefile</CODE>:
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green># default language (falls back to &quot;en&quot;)</FONT>
+  <FONT COLOR=red>DEFAULT_LANGUAGE=de</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+Nevertheless, not all speakers provide abstracts in the default language, which can lead to inconsistent pages.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  If the default language is German, &quot;Unterlagen&quot;
+  below an English abstract doesn't look perfect.</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+So the language setting can be modified for every single page, in a file named <CODE>&lt;directory level type&gt;.lang</CODE> (<CODE><A name="index_42_366"></A>author.lang</CODE>, <CODE><A name="index_42_367"></A>talk.lang</CODE> etc.). The language shortcut is expected in the first line. Here is an example:
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  de</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="jslide0035.htm#Defaults">Defaults</A>  </li>   <li>  <A HREF="jslide0036.htm#Directory order">Directory order</A>  </li>   <li>  <A HREF="jslide0049.htm#Source checks">Source checks</A>  </li>   <li>  <A HREF="jslide0034.htm#Configure the make call">Configure the make call</A>  </li> 
+</UL>
+
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0043.htm">Module index</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0041.htm">Integrating images</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

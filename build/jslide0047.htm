@@ -1,0 +1,243 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0029.htm">
+  <link rel="prev"     href="jslide0046.htm">
+  <link rel="next"     href="jslide0048.htm">
+  <link rel="up"       href="jslide0028.htm">
+  <link rel="last"     href="jslide0052.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>PerlPoint macros ready to use</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0047.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+                    Next: <a href="jslide0048.htm">Provide browser navigation</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0046.htm">POD support</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="PerlPoint macros ready to use">
+<center>
+<H1>PerlPoint macros ready to use
+</H1></center>
+
+
+<P>
+<A name="index_47_395"></A>
+</P>
+
+
+<P>
+PerlPointCD is a <A name="index_47_396"></A>PerlPoint application, which means that it generates PerlPoint on the fly and finally transformes it into HTML. For reasons of convenience, the generated PerlPoint defines and uses various <A name="index_47_397"></A>PerlPoint <I>macros</I>.
+</P>
+
+
+<P>
+Speaker bios, talk abstracts and other CD sources are preferably written in <A name="index_47_398"></A>PerlPoint as well. Due to the fact that they are made parts of the generated PerlPoint they can access the &quot;internal&quot; macros as well. These macros are available:
+</P>
+
+
+<P>
+<center>
+</P>
+<TABLE border=2><TR>
+<TD><B>macro</B></TD><TD><B>description</B></TD><TD><B>example</B></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_399"></A>\BU</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: format bold and underline</TD><TD><CODE>\BU&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_400"></A>\BX</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: format bold and index</TD><TD><CODE>\BX&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_401"></A>\BC</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: format bold and as code</TD><TD><CODE>\BC&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_402"></A>\CX</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: format as code and index</TD><TD><CODE>\CX&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_403"></A>\BCX</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: format bold and as code and index</TD><TD><CODE>\BCX&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_404"></A>\IB</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: italize and format bold</TD><TD><CODE>\IB&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_405"></A>\IX</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: italize and index</TD><TD><CODE>\IX&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_406"></A>\IBX</CODE></B></TD><TD><CODE>\B&lt;\U&lt;</CODE>...<CODE>&gt;&gt;</CODE> shortcut: format bold italic and index</TD><TD><CODE>\IBX&lt;text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_407"></A>\URL</CODE></B></TD><TD>makes the body a link to the target specified by option <CODE>a</CODE></TD><TD><CODE>\URL{a=&quot;htp://search.cpan.org&quot;}&lt;CPAN search&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_408"></A>\URLT</CODE></B></TD><TD>makes the body a link to the target specified by the body text, adds a <CODE>http://</CODE> prefix unless the address already specifies a link type</TD><TD><CODE>\URLT&lt;www.perlworkshop.de&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_409"></A>\MAILTO</CODE></B></TD><TD>makes the body a mail link to the address specified by the body</TD><TD><CODE>\MAILTO&lt;perl@jochen-stenzel.de&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_410"></A>\MAIL</CODE></B></TD><TD>makes the body a mail link to the address specified by option <CODE>addr</CODE></TD><TD><CODE>\MAIL{addr=&quot;perl@jochen-stenzel.de&quot;}&lt;PPCD author&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_411"></A>\XO</CODE></B></TD><TD>&quot;index only&quot;: body is made an index entry and <I>hidden</I></TD><TD><CODE>\XO&lt;entry&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_412"></A>\XOM</CODE></B></TD><TD>&quot;index only, multiply&quot;: body is treated as a <I>list</I> of phrases to be made index entries. (Phrases are delimited by (whitespaces and) &quot;|&quot; unless another delimiter string is specified via option <CODE>d</CODE>.) At the current position, the body text remains invisible.</TD><TD><CODE>\XOM&lt;entry, in context | context entry&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_413"></A>\CENTER</CODE></B></TD><TD>centers the body</TD><TD><CODE>\CENTER&lt;centered&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_414"></A>\CENTER_ON</CODE></B></TD><TD>activates HTML centering (by inserting a <CODE>&lt;CENTER&gt;</CODE> tag)</TD><TD><CODE>\CENTER_ON</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_415"></A>\CENTER_OFF</CODE></B></TD><TD>deactivates HTML centering (by inserting a <CODE>&lt;/CENTER&gt;</CODE> tag)</TD><TD><CODE>\CENTER_OFF</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_416"></A>\INDENT</CODE></B></TD><TD>indents the body</TD><TD><CODE>\INDENT&lt;indented&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_417"></A>\INDENT_ON</CODE></B></TD><TD>opens a new indentation level</TD><TD><CODE>\INDENT_ON</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_418"></A>\INDENT_OFF</CODE></B></TD><TD>closes an indentation level</TD><TD><CODE>\INDENT_OFF</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_419"></A>\SMALL</CODE></B></TD><TD>formats the body using the HTML tag <CODE>&lt;SMALL&gt;</CODE></TD><TD><CODE>\SMALL&lt;small text&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_420"></A>\RED</CODE></B></TD><TD>red colorization</TD><TD><CODE>\RED&lt;colored&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_421"></A>\GREEN</CODE></B></TD><TD>green colorization</TD><TD><CODE>\GREEN&lt;colored&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_422"></A>\BLUE</CODE></B></TD><TD>blue colorization</TD><TD><CODE>\BLUE&lt;colored&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_423"></A>\CPAN_MODULE</CODE></B></TD><TD>The body is treated as the name of a CPAN module. The body text is made a link to the modules page on <A HREF="http://search.cpan.org" target="_blank">search.cpan.org</A> (the address is built generically). Additionally, the reference is registered and used when the <A HREF="jslide0043.htm#Module index">module index</A> is built.</TD><TD><CODE>\CPAN_MODULE&lt;PerlPoint::Package&gt;</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_424"></A>\DATE</CODE></B></TD><TD>inserts the current date and time</TD><TD><CODE>\DATE</CODE></TD></TR>
+<TR>
+<TD><B><CODE><A name="index_47_425"></A>\COPYRIGHT</CODE></B></TD><TD>inserts an HTML copyright character</TD><TD><CODE>\COPYRIGHT</CODE></TD></TR>
+</TABLE>
+<P>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+When asking speakers for their files, a list of these standard macros could be passed to let them know which features are available by default.
+</P>
+
+
+<P>
+In case you want to provide even more predeclared macros, write the definitions to a file, store it in the PerlPointCD directories (preferably under <CODE><A name="index_47_426"></A>prepare</CODE>) and integrate it by using the <CODE><A name="index_47_427"></A>makefile</CODE> <A name="index_47_428"></A>macro <CODE><A name="index_47_429"></A>INITFILE</CODE>.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  make <FONT COLOR=red>INITFILE=prepare/macros.pp</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+Please note that the tool macros (listed above) are read <I>later</I> then this initfile, which means that the initfile cannot redefine or reset them.
+</P>
+
+
+<P>
+For this demonstration, I defined macros for footnotes and convenient cross references. These macros are available with the distribution as well (see <CODE>prepare/macros.pp</CODE>).
+</P>
+
+
+<P>
+<center>
+</P>
+<TABLE border=2><TR>
+<TD><B>macro</B></TD><TD><B>description</B></TD><TD><B>options</B></TD><TD><B>example</B></TD></TR>
+<TR>
+<TD><B><A name="index_47_430"></A>\FN</B></TD><TD>Defines a footnote. The footnote name should be exclusive.</TD><TD><CODE>n</CODE>: name (mandatory)</TD><TD><CODE>\FN{&quot;footnote example&quot;}&lt;An example footnote.&gt;</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_47_431"></A>\FNR</B></TD><TD>A footnote reference. Multiple references to the same note are possible.</TD><TD><CODE>n</CODE>: name (mandatory)</TD><TD><CODE>\FNR{&quot;footnote example&quot;}</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_47_432"></A>\TS</B></TD><TD>A helper macro to start a footnote text paragraph. Usually, if a text paragraph starts with a tag or macro, PerlPoint delays paragraph type recognition till the tag/macro is closed, which means the tag or macro body needs to be found on the same line. For (possibly long) footnotes, this is not convenient. The <CODE>\TS</CODE> macro is a workaround: it closes immediately and produces no contents. This means the paragraph type (text) is recognized very quickly, and a subsequent and possibly long tag or macro can be split up upon lines.</TD><TD>&nbsp;</TD><TD><CODE><FONT COLOR=red>\TS</FONT>\FN{&quot;footnote example&quot;}&lt;An example footnote.&gt;</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_47_433"></A>\OREF</B></TD><TD>An <I>o</I>ptional <I>ref</I>erence. A link is produced <I>only if the target exists</I>, otherwise just the macro body shows up. Non existing targets will cause info messages, but no error.</TD><TD><CODE>n</CODE>: target name (mandatory)</TD><TD><CODE>\OREF{n=&quot;A possibly existing chapter&quot;}&lt;chapter&gt;</CODE></TD></TR>
+</TABLE>
+<P>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0048.htm">Provide browser navigation</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0046.htm">POD support</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

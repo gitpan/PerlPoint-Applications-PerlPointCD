@@ -1,0 +1,12 @@
+
+They told me there will be a a conference CD. Great! So X<attendees> can play with my X<scripts>
+when I'll give the talk. And I can provide my add on X<library> to X<demonstrate> all the
+X<features> that cannot be presented during the talk.
+
+Hm. I'm not I<sure> I will have all this stuff ready in time, but at least the lib is ready to
+run. And I have a generated HTML intro.
+
+So I send them a few words about me (X<bio>), my X<abstract> (I already wrote one when I
+answered the call for papers, so that's easy), a X<keyword list>, the library and my intro
+pages in HTML. Let's see if I can provide slides as well. Hm, at least a prerelease.
+

@@ -1,0 +1,36 @@
+
+
+# load library
+use Pod::PerlPoint 0.03;
+
+# declare the filter function
+sub pod2pp
+ {
+  # declare variables
+  my ($pod2pp, $result, $i);
+
+  # get source and sourcefile name
+  my ($pod, $sourcefile)=(join('', @main::_ifilterText), $main::_ifilterFile);
+
+  # transform it into PerlPoint
+  {
+   ($pod2pp, $result)=(new Pod::PerlPoint());
+   $pod2pp->output_string(\$result);
+   my $rc=$pod2pp->parse_string_document($pod);
+   $i++, $pod="\n\n=pod\n\n$pod", redo unless $result or $i;
+
+   # report errors, if any
+   if (exists $pod2pp->{errata})
+    {
+     warn "\nPOD error detected in $sourcefile:\n\n";
+     foreach (sort {$a <=> $b} keys %{$pod2pp->{errata}})
+       {warn "Line $_:\n\n", map {"$_\n"} @{$pod2pp->{errata}{$_}};}
+
+     # flag the error
+     die "\n";
+    }
+  }
+
+  # supply result
+  $result;
+ }

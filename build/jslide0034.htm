@@ -1,0 +1,194 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0029.htm">
+  <link rel="prev"     href="jslide0033.htm">
+  <link rel="next"     href="jslide0035.htm">
+  <link rel="up"       href="jslide0028.htm">
+  <link rel="last"     href="jslide0052.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Configure the make call</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0034.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+                    Next: <a href="jslide0035.htm">Defaults</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0033.htm">Center paragraphs</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Configure the make call">
+<center>
+<H1>Configure the make call
+</H1></center>
+
+
+<P>
+<A name="index_34_229"></A>
+</P>
+
+
+<P>
+PerlPointCD configurations are mostly done by <CODE><A name="index_34_230"></A>makefile</CODE> <A name="index_34_231"></A>macros. As usual with <CODE><A name="index_34_232"></A>make</CODE>, those macros can be modified in the <CODE>makefile</CODE> or overwritten by assignments passed to <CODE>make</CODE>.
+</P>
+
+
+<P>
+Here is a list of the available settings.
+</P>
+
+
+<P>
+<center>
+</P>
+<TABLE border=2><TR>
+<TD><B>Macro</B></TD><TD><B>Description</B></TD></TR>
+<TR>
+<TD><B><A name="index_34_233"></A>PERL</B></TD><TD>the command to invoke <CODE><A name="index_34_234"></A>perl</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_235"></A>PPCD</B></TD><TD>the directory of PerlPointCD tools, usually <CODE><A name="index_34_236"></A>PerlPointCD</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_237"></A>PREPARE</B></TD><TD>the directory of user preparations, usually <CODE><A name="index_34_238"></A>prepare</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_239"></A>BUILD</B></TD><TD>the directory to build the CD in, usually <CODE><A name="index_34_240"></A>build</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_241"></A>STYLES</B></TD><TD>the root directory of <A name="index_34_242"></A>PerlPoint <A name="index_34_243"></A>styles (or <A name="index_34_244"></A>layouts), usually <CODE>${PREPARE}/styles</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_245"></A>DEFAULTS</B></TD><TD>the directory of <A HREF="jslide0035.htm#Defaults">defaults</A>, usually <CODE>${PREPARE}/<A name="index_34_246"></A>defaults</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_247"></A>IMAGESRCDIR</B></TD><TD>the directory to <I>find</I> <A HREF="jslide0041.htm#Integrating images">images</A> in when parsing the PerlPoint sources, <I>relative to the tool start directory</I>, usually <CODE>${BUILD}/images</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_248"></A>IMAGEREFDIR</B></TD><TD>the directory to <I>display</I> <A HREF="jslide0041.htm#Integrating images">images</A> from in generated pages, <I>relative to the CD root</I>, usually <CODE>images</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_249"></A>DATA</B></TD><TD>the base directory of the talk <A name="index_34_250"></A>directory structure, usually <CODE>${BUILD}/<A name="index_34_251"></A>data</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_252"></A>CONFERENCE</B></TD><TD>the title of the current workshop, used when building links to the workshop startup page in <A HREF="jslide0030.htm#Author index">author</A> and <A HREF="jslide0043.htm#Module index">module</A> index entries</TD></TR>
+<TR>
+<TD><B><A name="index_34_253"></A>PROJECT</B></TD><TD>the base name of the PerlPointCD script, <CODE>demo-cd</CODE> in this distribution</TD></TR>
+<TR>
+<TD><B><A name="index_34_254"></A>TITLE</B></TD><TD>the title displayed in generated pages</TD></TR>
+<TR>
+<TD><B><A name="index_34_255"></A>TOCTITLE</B></TD><TD>the title of the TOC page, usually &quot;Contents&quot;</TD></TR>
+<TR>
+<TD><B><A name="index_34_256"></A>CDAUTHORMAIL</B></TD><TD>the mail address of the conference organizers, stored in generated meta tags</TD></TR>
+<TR>
+<TD><B><A name="index_34_257"></A>CDDESCRIPTION</B></TD><TD>CD description string, stored in generated meta tags</TD></TR>
+<TR>
+<TD><B><A name="index_34_258"></A>CDINITIALURL</B></TD><TD>initial startup URL of the CD - used when linking to the startup page and only working if the CD is installed on a Webserver, usually <CODE>/index.html</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_259"></A>CDSTARTURL</B></TD><TD>CD start URL (including server name), used when generating <A HREF="jslide0052.htm#Validation support">validation links</A>&nbsp;</TD></TR>
+<TR>
+<TD><B><A name="index_34_260"></A>TALKSTYLEORDER</B></TD><TD><A HREF="jslide0036.htm#Directory order">talk style order</A> configuration</TD></TR>
+<TR>
+<TD><B><A name="index_34_261"></A>INITFILE</B></TD><TD><A HREF="jslide0047.htm#PerlPoint macros ready to use">initial PerlPoint file</A> to declare macros, variables, code etc. available to all team members and contributing speakers</TD></TR>
+<TR>
+<TD><B><A name="index_34_262"></A>INTROTITLE</B></TD><TD>title of the optional <A HREF="jslide0023.htm#Welcome and Impressum">intro page</A>&nbsp;</TD></TR>
+<TR>
+<TD><B><A name="index_34_263"></A>INTROFILE</B></TD><TD>an optional <A HREF="jslide0023.htm#Welcome and Impressum">intro page</A>&nbsp;</TD></TR>
+<TR>
+<TD><B><A name="index_34_264"></A>IMPRESSUM</B></TD><TD>an optional <A HREF="jslide0023.htm#Welcome and Impressum">impressum</A>&nbsp;</TD></TR>
+<TR>
+<TD><B><A name="index_34_265"></A>IMPORTFILTERDIR</B></TD><TD>directory of pluggable <A HREF="jslide0039.htm#Import filters can be added">import filters</A>&nbsp;</TD></TR>
+<TR>
+<TD><B><A name="index_34_266"></A>IMPORTORDER</B></TD><TD>the order alternative formats should be taken into account if a PerlPoint source is missing (<I>e.g. if <CODE>author.pod</CODE> or <CODE>author.wiki</CODE> should be chosen if there is no <CODE>author.pp</CODE>, both files exist and <A HREF="jslide0039.htm#Import filters can be added">filters</A> were defined for both</I>)</TD></TR>
+<TR>
+<TD><B><A name="index_34_267"></A>DEFAULT_LANGUAGE</B></TD><TD>configures the <A HREF="jslide0042.htm#Language support">default language</A> of generated texts</TD></TR>
+<TR>
+<TD><B><A name="index_34_268"></A>CHECKLOG</B></TD><TD>the logfile written in <A HREF="jslide0049.htm#Source checks">check mode</A>, overwritten by each checking call</TD></TR>
+<TR>
+<TD><B><A name="index_34_269"></A>CHECKDATA</B></TD><TD>a data file used in <A HREF="jslide0049.htm#Source checks">check mode</A>, overwritten by each checking call</TD></TR>
+<TR>
+<TD><B><A name="index_34_270"></A>TRACE</B></TD><TD><A name="index_34_271"></A>PerlPoint <A name="index_34_272"></A>trace level, see the documentation of <CODE><A name="index_34_273"></A>pp2html</CODE> for details</TD></TR>
+<TR>
+<TD><B><A name="index_34_274"></A>INDEXREL_READDEPTH</B></TD><TD><A HREF="jslide0031.htm#Automatic cross references">index based cross references</A>: number of sublevels to be searched for index entries on <I>referencing</I> pages, defaults to <CODE>full</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_275"></A>INDEXREL_RELDEPTH</B></TD><TD><A HREF="jslide0031.htm#Automatic cross references">index based cross references</A>: number of sublevels to be taken into account on <I>referenced</I> pages, defaults to <CODE>full</CODE></TD></TR>
+<TR>
+<TD><B><A name="index_34_276"></A>INDEXREL_THRESHOLD</B></TD><TD><A HREF="jslide0031.htm#Automatic cross references">index based cross references</A>: threshold, defaults to <CODE>20%</CODE></TD></TR>
+</TABLE>
+<P>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0035.htm">Defaults</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0033.htm">Center paragraphs</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

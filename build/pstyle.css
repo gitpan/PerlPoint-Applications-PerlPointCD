@@ -1,0 +1,118 @@
+#top {
+  padding: 4px 0 4px 0;
+  /* background-color: #6b9eed; */
+  color: black;
+  font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+}
+
+#nav {
+  float: left; width: 220px; min-height: 80%;
+  /* NN 4.x hack */
+  margin-left: -1px;
+  background-color: #FFCA00; color: black;
+  font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  font-size: 80%;
+}
+
+#nav td {
+  align: center;  font-size: small;
+}
+
+#content {
+  margin-left: 20px;
+  padding: 10px;
+}
+
+/* margin: top right bottom left */
+.s1 { margin: 4px 0 4px 10px; }
+.s2 { margin: 4px 0 2px 20px; }
+.s3 { margin: 2px 0 2px 30px; }
+.s4 { margin: 2px 0 2px 40px; }
+.s5 { margin: 2px 0 2px 55px; }
+.s6 { margin: 2px 0 2px 70px; }
+.s7 { margin: 2px 0 2px 85px; }
+
+#footer {
+  clear: both; width: 100%; 
+  /* position: absolute; left: 0; bottom: 0; width: 220px; */
+  /* position: fixed; bottom: 0; width: 220px; */
+  margin-top: 1em;
+  padding: 0.5em 0 0.5em 0;
+  /* background-color: #9999ff; color: black; */
+  font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  vertical-align: baseline;
+}
+
+#copy {
+  font-size: 80%;
+  float: left; width: 220px;
+  vertical-align: baseline;
+}
+
+#footer .rights { }
+
+#footer p { 
+  margin: 0 33% 0 33%; 
+  text-align: center;
+  vertical-align: baseline;
+}
+
+#footer .pp {
+  font-style : italic; 
+  float: right;
+  text-align: right;
+  vertical-align: baseline;
+}
+
+#pp {
+  font-style : italic; 
+}
+
+.small {
+  background-color: #6b9eed; color: black; font-size: small;
+  text-align: right; vertical-align: top;
+}
+
+div#footer aa:link {
+	font-weight : bold; 
+	text-decoration : none;
+	color: #fff;
+	background: transparent; 
+}
+
+div#footer aa:visited {
+	font-weight : bold; 
+	text-decoration : none;
+	color: #fff;
+	background: transparent; 
+}
+
+div#footer aa:hover {
+	font-weight : bold; 
+	text-decoration : underline;
+	color: #000;
+	background: transparent; 
+}
+
+div#footer aa:active {
+	font-weight : bold; 
+	text-decoration : none;
+	color: #cf0;
+	background: transparent;  
+}
+
+
+PRE {
+     /* font-family: mono-space;
+     font-color: #333333;
+     font-weight: 100;
+     font-size: 9px; */
+     white-space: pre;
+     background-color: #eeeeee;
+     padding: 5px;
+     /* width: 90%; */
+     border: 2px solid #bebebe;
+    }
+
+

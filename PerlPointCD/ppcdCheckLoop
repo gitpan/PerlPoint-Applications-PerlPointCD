@@ -1,0 +1,10 @@
+
+my ($logfile, $datafile)=(shift, shift);
+die "Usage: $0 <logfile> <datafile> <call>" unless $logfile and $datafile;
+
+# rerun CD script until it succeeds - make sure you have a working base frame!
+unlink($logfile);
+unlink($datafile);
+open(STDERR, ">> $logfile");
+do {system @ARGV} until $?==0;
+

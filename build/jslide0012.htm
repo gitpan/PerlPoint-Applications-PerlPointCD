@@ -1,0 +1,230 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0011.htm">
+  <link rel="prev"     href="jslide0011.htm">
+  <link rel="next"     href="jslide0013.htm">
+  <link rel="up"       href="jslide0010.htm">
+  <link rel="last"     href="jslide0013.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Integrating stuff</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0012.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0009.htm">Long Talks</a> / <a href="jslide0010.htm">Custodian</a></I><BR>
+                    Next: <a href="jslide0013.htm">Providing results to the team</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0011.htm">Asking for materials</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Integrating stuff">
+<center>
+<H1>Integrating stuff
+</H1></center>
+
+
+<P>
+<A name="index_12_81"></A>
+</P>
+
+
+<P>
+Mail by a speaker! CD stuff arrived!
+</P>
+
+
+<P>
+Now:
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+The <A name="index_12_82"></A>bio is stored in a file <CODE><A name="index_12_83"></A>author.pp</CODE> (or <CODE><A name="index_12_84"></A>author.pod</CODE>, if the speaker wrote <A name="index_12_85"></A>POD).
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+The <A name="index_12_86"></A>abstract is stored in a file <CODE><A name="index_12_87"></A>talk.pp</CODE> (or <CODE><A name="index_12_88"></A>talk.pod</CODE>, respectively).
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+A list of <A name="index_12_89"></A>key phrases is stored in <CODE><A name="index_12_90"></A>talk-index</CODE>, one phrase per line (empty lines and <CODE>#</CODE> comment lines possible).
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+In case the additional <A name="index_12_91"></A>stuff has an <A name="index_12_92"></A>HTML entry, the startup page needs to be named <CODE><A name="index_12_93"></A>index.html</CODE>.
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+<A name="index_12_94"></A>In my installation of PerlPointCD, I make a talk directory:
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <A name="index_12_95"></A>build/data/Long_Talks/<FONT COLOR=red>CPAN_man/CPAN,_modules_and_the_world</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+The bio goes to the directory on <I><A name="index_12_96"></A>author</I> level:
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  build/data/Long_Talks/CPAN_man/<FONT COLOR=red>author.pp</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+Abstract and keyword list are stored on <I><A name="index_12_97"></A>talk</I> level:
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  build/data/Long_Talks/CPAN_man/CPAN,_modules_and_the_world/<FONT COLOR=red>talk.pp</FONT>
+  build/data/Long_Talks/CPAN_man/CPAN,_modules_and_the_world/<FONT COLOR=red>talk-index</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+Finally, if there is additional stuff, a <CODE><A name="index_12_98"></A>data</CODE> subdirectory is made to store it in, and then the stuff goes there unmodified.
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  build/data/Long_Talks/CPAN_man/CPAN,_modules_and_the_world/<FONT COLOR=red>data/*</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+Running <CODE><A name="index_12_99"></A>make</CODE> in the PerlPointCD <A HREF="jslide0005.htm#02: Directory structure">working directory</A> (above <CODE>build</CODE>) generates CD slides presenting this talk. Ready!
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="jslide0034.htm#Configure the make call">Configure the make call</A>  </li>   <li>  <A HREF="jslide0006.htm#03: Setting up the Tracks">03: Setting up the Tracks</A>  </li>   <li>  <A HREF="jslide0011.htm#Asking for materials">Asking for materials</A>  </li>   <li>  <A HREF="jslide0035.htm#Defaults">Defaults</A>  </li> 
+</UL>
+
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0013.htm">Providing results to the team</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0011.htm">Asking for materials</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0009.htm">Long Talks</a> / <a href="jslide0010.htm">Custodian</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

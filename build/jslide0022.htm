@@ -1,0 +1,182 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0019.htm">
+  <link rel="prev"     href="jslide0021.htm">
+  <link rel="next"     href="jslide0023.htm">
+  <link rel="up"       href="jslide0018.htm">
+  <link rel="last"     href="jslide0023.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Putting the pieces together</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0022.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0009.htm">Long Talks</a> / <a href="jslide0018.htm">The editor</a></I><BR>
+                    Next: <a href="jslide0023.htm">Welcome and Impressum</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0021.htm">Startup page</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Putting the pieces together">
+<center>
+<H1>Putting the pieces together
+</H1></center>
+
+
+<P>
+<A name="index_22_142"></A>
+</P>
+
+
+<P>
+Here is the CD team again. The <A name="index_22_143"></A>custodians sent us the speaker materials, usually in the form of author <A name="index_22_144"></A>directories.
+</P>
+
+
+<P>
+Such a directory looks like this:
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green><I>James_Fletcher</I></FONT>
+    |
+    |-- author.pp
+    |
+    |-- <I>Burning_a_CD</I>
+          |
+          |-- talk.pp
+          |
+          |-- <I>data</I>
+                |
+                |-- index.html
+                |
+                |-- &lt;more stuff&gt;</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+It is made part of the CD by storing it in the appropriate <A name="index_22_145"></A>talk type directory - remember we have <A name="index_22_146"></A>Tutorials, <A name="index_22_147"></A>Long Talks etc.
+</P>
+
+
+<P>
+If Mr. Fletcher gives a &quot;Long Talk&quot;, the resulting directory structure is this:
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=red><I>working directory (the one with a makefile)</I>
+    |
+    |-- <I><A name="index_22_148"></A>build</I>
+          |
+          |-- <I><A name="index_22_149"></A>data</I>
+                |
+                |-- <I><B><A name="index_22_150"></A>Long_Talks</B></I></FONT>
+                      |
+                      |-- <FONT COLOR=green><I>James_Fletcher</I></FONT>
+                            |
+                            |-- author.pp
+                            |
+                            |-- <I>Burning_a_CD</I>
+                            |
+                            |...</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+Doing this for various talks (and running <CODE><A name="index_22_151"></A>make</CODE>, subsequently ;-) results in a (hopefully) complete presentation of the talks.
+</P>
+
+
+<P>
+And so the base part is done.
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="jslide0005.htm#02: Directory structure">02: Directory structure</A>  </li>   <li>  <A HREF="jslide0036.htm#Directory order">Directory order</A>  </li>   <li>  <A HREF="jslide0026.htm#The master CD">The master CD</A>  </li>   <li>  <A HREF="jslide0034.htm#Configure the make call">Configure the make call</A>  </li>   <li>  <A HREF="jslide0012.htm#Integrating stuff">Integrating stuff</A>  </li>   <li>  <A HREF="jslide0006.htm#03: Setting up the Tracks">03: Setting up the Tracks</A>  </li> 
+</UL>
+
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0023.htm">Welcome and Impressum</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0021.htm">Startup page</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0009.htm">Long Talks</a> / <a href="jslide0018.htm">The editor</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

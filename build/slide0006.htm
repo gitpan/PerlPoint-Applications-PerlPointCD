@@ -1,0 +1,294 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="slide0004.htm">
+  <link rel="prev"     href="slide0005.htm">
+  <link rel="next"     href="slide0007.htm">
+  <link rel="up"       href="slide0003.htm">
+  <link rel="last"     href="slide0007.htm">
+  <link rel="contents" href="slide0000.htm">
+  <link rel="index"    href="slide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>03: Setting up the Tracks</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="pstyle.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "pstyle.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/slide0006.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+
+<div id=top>
+<table border="0" cellspacing="2" cellpadding="0" width="100%">
+    
+  <tbody>
+
+    <tr>
+      <td width="200">
+        <a href="http://www.sourceforce.net/projects/perlpoint"><img src="images/PPL13s5b-o.jpg" border=0 alt="PerlPoint"></a>
+      </td>
+      <td align=center>PerlPointCD<br><i><A HREF="/index.html" TARGET=_top>Start</A> / <a href="slide0002.htm">Tutorials</a> / <a href="slide0003.htm">The editor</a></i></td>
+    </tr>
+
+  </tbody>
+
+</table>
+</div>
+
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+
+  <tbody>
+
+    <tr valign="bottom">
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr valign="top">
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr valign="bottom">
+    </tr>
+
+    <tr valign="top">
+
+    <td></td>
+    
+    <td></td>
+    
+    <td id=nav width="10%">
+
+ <table width=200>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td>&gt; <a href="slide0007.htm">04: Arrange the duties</a></td></tr>
+  <tr><td>&lt; <a href="slide0005.htm">02: Directory structure</a></td></tr>
+  <tr><td>= <a href="slide0000.htm">TOC</a></td></tr>
+  <tr><td>&nbsp;</td></tr>
+ </table>
+
+<p class="ahem">You are using an old browser which doesn't fully support
+Cascading Style Sheets. This page will look <em>much</em> better in a browser that
+supports <a href="http://www.webstandards.org/upgrade/"target="_top"
+title="The Web Standards Project's BROWSER UPGRADE initiative.">web
+standards</a>.</p>
+
+<p class="ahem">&nbsp;</p>
+
+
+    </td>
+    
+    <td></td>
+    <td></td>
+
+    <td width="100%" colspan="4">
+
+      <div id=content>
+<a name="03: Setting up the Tracks">
+<center>
+<H1>03: Setting up the Tracks
+</H1></center>
+
+
+<P>
+<A name="index_6_23"></A>
+</P>
+
+
+<P>
+Every conference has several <A name="index_6_24"></A>types of talks. At the <A name="index_6_25"></A><A HREF="http://www.perlworkshop.de" target="_blank">German Perl Workshop</A> we use to have <I><A name="index_6_26"></A>Tutorials</I>, <I><A name="index_6_27"></A>Long Talks</I>, <I><A name="index_6_28"></A>Short Talks</I> and even <I><A name="index_6_29"></A>Lightning Talks</I>. More, there are special types like <I><A name="index_6_30"></A>Invited Talks</I>, <I><A name="index_6_31"></A>BOFs</I> and the like.
+</P>
+
+
+<P>
+For each presentation type, there are speakers talking. Several speakers just hold one talk. Others provide lots of them.
+</P>
+
+
+<P>
+The point is that the talks can be easily categorized. Here is how PerlPointCD does it:
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+A conference has <A name="index_6_32"></A><CODE><A HREF="http://search.cpan.org/dist/Event" target="_blank">Event</A></CODE> types. Oops, this should read <I><A name="index_6_33"></A>event types</I>. ;-) (Internally, event types are refered as &quot;styles&quot;.)
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+There are <I>speakers</I> for each type of event.
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+Every speaker gives <I>talks</I>.
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+So the <A name="index_6_34"></A>hierarchy is <FONT COLOR=red><A name="index_6_35"></A>style - <A name="index_6_36"></A>author - <A name="index_6_37"></A>talk</FONT>. Pretty easy. And the <A name="index_6_38"></A>directory structure reflects it.
+</P>
+
+
+<P>
+For every hierarchy <A name="index_6_39"></A>level, the tool expects a corresponding directory level in the <B><CODE><A name="index_6_40"></A>data</CODE></B> subdirectory of <CODE><A name="index_6_41"></A>build</CODE>. So to organize the talks for the CD, just make the directories.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  Let's say we have two <I>Long Talks</I> by
+  <I>James Fletcher</I> about <I>&quot;The art
+  of presentation&quot;</I> and <I>&quot;Burning a CD&quot;</I>.
+  The second one is held together with his
+  wife <I>Jane</I>.
+
+  The corresponding directory structure is
+
+    Long_Talk/James_Fletcher/The_art_of_presentation
+    Long_Talk/James_Fletcher,_Jane_Fletcher/Burning_a_CD
+
+  in the build/data directory.</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+What about the underscores? They represent spaces. If the file system supports spaces in file names, spaces can be used directly as well (but it might make handling handier to stay with the underscores).
+</P>
+
+
+<P>
+<A name="index_6_42"></A>Please note how the Fletchers were combined in the authors directory name. The convention is to use a <A name="index_6_43"></A>comma and optional whitespaces around it.
+</P>
+
+
+<P>
+Working on a directory base makes it easy to <I>move</I> talks around.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  If Mr. Fletcher decides to give Tutorials
+  instead of Long Talks, all I have to do is
+  to move the <CODE>Fletcher</CODE> directories from
+  <I>Long_Talks</I> to <I>Tutorials</I>.</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+It's also easy to add or cancel events at any time during conference preparation.
+</P>
+
+
+<P>
+Now, I suggest to play around and add a few talks, aehm, directories. There is no need for contents - the directories will make a pretty nice CD frame.
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="slide0012.htm#Integrating stuff">Integrating stuff</A>  </li>   <li>  <A HREF="slide0036.htm#Directory order">Directory order</A>  </li> 
+</UL>
+
+
+</P>
+
+    </td>
+
+    <td></td>
+    
+</tr>
+
+<tr>
+    <td></td>
+    
+    <td></td>
+    
+    <td id=nav>
+
+    <span class=copy>
+      Copyright &copy; <a
+      href="mailto:perl@jochen-stenzel.de">Jochen Stenzel, 2001-2004</a>.
+      <br>
+      <span class=rights>All rights reserved.</span>
+    </span>
+
+    </td>
+
+</tr>
+
+<tr>
+
+    <td></td>
+    <td></td>
+
+    <td id=nav>
+
+    <span class=pp>
+      <br><a href="http://www.sourceforge.net/projects/perlpoint">PerlPoint</a> powered.
+    </span>
+
+    </td>
+
+    <td></td>
+    <td></td>
+    <td width="100%" colspan="4"></td>
+    <td></td>
+   
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+</div><!-- content -->
+</BODY>
+</HTML>

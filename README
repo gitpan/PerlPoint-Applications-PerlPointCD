@@ -1,0 +1,198 @@
+
+
+This archive contains PerlPointCD, a tool to compile conference CDs.
+
+Similarly, it can be used to build websites that present the talks
+of a conference.
+
+
+
+VERSION
+-------
+
+This is version 3.00.
+
+Previous versions were not made public. They were developed to produce
+the German Perl Workshop CDs 2002 and 2003.
+
+
+
+MAIN FEATURES
+-------------
+
+* produces HTML user interfaces to browse,
+
+* one or more template based layouts,
+
+* layouts can provide CSS, Java, JavaScript and/or frames for
+  navigation,
+
+* directory based approach makes it easy to organize talks within
+  the cd structure,
+
+* automatic conversion between long and (ISO file system and
+  web address compliant) short directory names,
+
+* convenient interface: makefile with certain targets,
+
+* prepared for teamwork: parts can be prepared by different team
+  members (and speakers) and easily integrated,
+
+* easy and transparent integration of speaker materials,
+
+* archive feature to integrate previous conferences,
+
+* related talks (of current year and archives) are linked
+  automatically,
+
+* source files can be written in PerlPoint or POD, further formats
+  can be added,
+
+* automatic links for CPAN modules,
+
+* module index added automatically,
+
+* author index added automatically,
+
+* index page generated automatically,
+
+* generic texts produced in configurable languages,
+
+* powerful set of predefined PerlPoint macros ready to use,
+
+* integrates validation links into prerelease pages,
+
+* supports browser navigation bars
+
+* ... and more
+
+
+
+
+INSTALLATION
+------------
+
+PerlPointCD is based on PerlPoint, an Open Source software to build
+documentations and presentations on base of ASCII sources, which is
+available both on CPAN and SourceForge:
+
+ * CPAN: PerlPoint::Applications::PerlPointCD
+ * SourceForge: www.sourceforge.net/projects/perlpoint
+
+So to use PerlPointCD, PerlPoint needs to be installed. Please get
+the packages
+
+  * PerlPoint::Package (0.39 or above),
+  * PerlPoint::Converters (1.01 or above),
+  * Pod::PerlPoint
+
+and install them by the usual steps
+
+  gtar zxvf <package>.tgz
+  cd <package>
+  make test install distclean
+
+Users of CPAN and CPANPLUS might simplify this process by installing
+Bundle::PerlPoint and Pod::PerlPoint.
+
+Note: PerlPoint::Converters 1.01 does not support the new features
+      of PerlPoint::Package 0.39 used by PerlPointCD 3.00, so
+      PerlPointCD 3.00 comes with a patched version of pp2html,
+      which is used transparently.
+
+
+
+DOCUMENTATION
+-------------
+
+The manual is provided as a "demo CD". Please open a browser and start
+with build/index.html.
+
+
+
+SUPPPORT
+--------
+
+A PerlPoint mailing list is set up to discuss usage, ideas,
+bugs, suggestions and translator development. To subscribe,
+please send an empty message to perlpoint-subscribe@perl.org.
+
+If you prefer, you can contact me via perl@jochen-stenzel.de
+as well.
+
+
+CREDITS
+-------
+
+Thanks to Jürgen Christoffel for lots of ideas, especially in the
+area of CSS. It was a pleasure to work together on the Perl
+Workshop CD 2003!
+
+Thanks to Lorenz Domke for pp2html, which is used to generate the
+pages, and for his help in integrating new features.
+
+
+
+AUTHOR
+------
+
+Copyright (c) Jochen Stenzel (perl@jochen-stenzel.de), 2001-2004.
+All rights reserved.
+
+Main parts of the CSS layout are courtesy of Jürgen Christoffel.
+The Java/frame layout is based on a layout by Lorenz Domke.
+
+The redirection Java applet on index.html is courtesy of Jürgen
+Christoffel.
+
+The pp2html file provided with this version of PerlPointCD is
+written by Lorenz Domke, with patches by me.
+
+
+
+This distribution is free software, you can redistribute it and/or
+modify it under the terms of the Artistic License distributed with
+Perl version 5.003 or (at your option) any later version. Please
+refer to the Artistic License that came with your Perl distribution
+for more details.
+
+The Artistic License should have been included in your distribution of
+Perl. It resides in the file named "Artistic" at the top-level of the
+Perl source tree (where Perl was downloaded/unpacked - ask your
+system administrator if you dont know where this is).  Alternatively,
+the current version of the Artistic License distributed with Perl can
+be viewed on-line on the World-Wide Web (WWW) from the following URL:
+http://www.perl.com/perl/misc/Artistic.html.
+
+
+
+
+DISCLAIMER
+----------
+
+This software is distributed in the hope that it will be useful, but
+is provided "AS IS" WITHOUT WARRANTY OF ANY KIND, either expressed or
+implied, INCLUDING, without limitation, the implied warranties of
+MERCHANTABILITY and FITNESS FOR A PARTICULAR PURPOSE.
+
+The ENTIRE RISK as to the quality and performance of the software
+IS WITH YOU (the holder of the software).  Should the software prove
+defective, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR
+CORRECTION.
+
+IN NO EVENT WILL ANY COPYRIGHT HOLDER OR ANY OTHER PARTY WHO MAY CREATE,
+MODIFY, OR DISTRIBUTE THE SOFTWARE BE LIABLE OR RESPONSIBLE TO YOU OR TO
+ANY OTHER ENTITY FOR ANY KIND OF DAMAGES (no matter how awful - not even
+if they arise from known or unknown flaws in the software).
+
+Please refer to the Artistic License that came with your Perl
+distribution for more details.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0029.htm">
+  <link rel="prev"     href="jslide0050.htm">
+  <link rel="next"     href="jslide0052.htm">
+  <link rel="up"       href="jslide0028.htm">
+  <link rel="last"     href="jslide0052.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Tree implosion</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0051.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+                    Next: <a href="jslide0052.htm">Validation support</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0050.htm">Supports speaker teams</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Tree implosion">
+<center>
+<H1>Tree implosion
+</H1></center>
+
+
+<P>
+<A name="index_51_459"></A>
+</P>
+
+
+<P>
+PerlPointCD uses a special <A name="index_51_460"></A>directory structure to configure the CD. Talk types, author names and talk titles are set up by <A name="index_51_461"></A>directory names. While this is convenient and makes <A name="index_51_462"></A>maintenance easy, the resulting directory names can become very long and might contain <A name="index_51_463"></A>special characters. Not all <A name="index_51_464"></A>file systems support this. At least not the <A name="index_51_465"></A>ISO file system which is used on CDs.
+</P>
+
+
+<P>
+More, if the CD content shall be provided via web, the resulting URL's might be invalid.
+</P>
+
+
+<P>
+Oops. Can we have both convenience <I>and</I> compatibility? We can.
+</P>
+
+
+<P>
+PerlPointCD can work with both <I>long and short directory names</I>. Short names match the old <A name="index_51_466"></A>8.3 DOS conventions. These names have no meaning, the real information about authors, talks etc. is searched in hidden files. A long name directory tree can be transformed into a short named version by using the <CODE><A name="index_51_467"></A>make</CODE> <A name="index_51_468"></A>target <FONT COLOR=red><CODE><A name="index_51_469"></A>implode</CODE></FONT>. Likewise, <FONT COLOR=red><CODE><A name="index_51_470"></A>explode</CODE></FONT> restores the long name version.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  make <FONT COLOR=red>implode</FONT>
+
+  ...
+
+  make <FONT COLOR=red>explode</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+Typically these targets do not need to be specified by a PerlPointCD user. The assumption is that the CD is prepared on a modern file system with long name support and that the final version (on CD or on a server) requires to have short names, so <CODE><A name="index_51_471"></A>make</CODE> automatically explodes a tree when producing a <A name="index_51_472"></A>preview version (<I>no</I> target or target <CODE><A name="index_51_473"></A>html</CODE>) and automatically implodes it when producing a <A name="index_51_474"></A>version for production (target <CODE><A name="index_51_475"></A>cd</CODE>).
+</P>
+
+
+<P>
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0052.htm">Validation support</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0050.htm">Supports speaker teams</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

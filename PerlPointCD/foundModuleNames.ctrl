@@ -1,0 +1,51 @@
+CPAN
+CPANPLUS
+Event
+PerlPoint::Applications::PerlPointCD
+PerlPoint::Converters
+PerlPoint::Package
+Pod::PerlPoint
+Pod::Simple
+$VAR1 = {
+          'Event' => {
+                       'Demo Workshop' => {
+                                            '03: Setting up the Tracks' => 'Tutorials|The editor|03: Setting up the Tracks'
+                                          }
+                     },
+          'Pod::Simple' => {
+                             'Demo Workshop' => {
+                                                  'POD support' => 'Lightning Talks|Jochen Stenzel|POD support'
+                                                }
+                           },
+          'Pod::PerlPoint' => {
+                                'Demo Workshop' => {
+                                                     '01: Installation' => 'Tutorials|The editor|01: Installation'
+                                                   }
+                              },
+          'PerlPoint::Applications::PerlPointCD' => {
+                                                      'Demo Workshop' => {
+                                                                           '01: Installation' => 'Tutorials|The editor|01: Installation'
+                                                                         }
+                                                    },
+          'PerlPoint::Package' => {
+                                    'Demo Workshop' => {
+                                                         'Excurse: Using PerlPoint' => 'Long Talks|Jochen Stenzel|Excurse: Using PerlPoint',
+                                                         '01: Installation' => 'Tutorials|The editor|01: Installation'
+                                                       }
+                                  },
+          'PerlPoint::Converters' => {
+                                       'Demo Workshop' => {
+                                                            '01: Installation' => 'Tutorials|The editor|01: Installation'
+                                                          }
+                                     },
+          'CPAN' => {
+                      'Demo Workshop' => {
+                                           '01: Installation' => 'Tutorials|The editor|01: Installation'
+                                         }
+                    },
+          'CPANPLUS' => {
+                          'Demo Workshop' => {
+                                               '01: Installation' => 'Tutorials|The editor|01: Installation'
+                                             }
+                        }
+        };

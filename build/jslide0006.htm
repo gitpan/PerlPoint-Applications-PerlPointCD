@@ -1,0 +1,222 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0004.htm">
+  <link rel="prev"     href="jslide0005.htm">
+  <link rel="next"     href="jslide0007.htm">
+  <link rel="up"       href="jslide0003.htm">
+  <link rel="last"     href="jslide0007.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>03: Setting up the Tracks</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0006.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0002.htm">Tutorials</a> / <a href="jslide0003.htm">The editor</a></I><BR>
+                    Next: <a href="jslide0007.htm">04: Arrange the duties</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0005.htm">02: Directory structure</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="03: Setting up the Tracks">
+<center>
+<H1>03: Setting up the Tracks
+</H1></center>
+
+
+<P>
+<A name="index_6_23"></A>
+</P>
+
+
+<P>
+Every conference has several <A name="index_6_24"></A>types of talks. At the <A name="index_6_25"></A><A HREF="http://www.perlworkshop.de" target="_blank">German Perl Workshop</A> we use to have <I><A name="index_6_26"></A>Tutorials</I>, <I><A name="index_6_27"></A>Long Talks</I>, <I><A name="index_6_28"></A>Short Talks</I> and even <I><A name="index_6_29"></A>Lightning Talks</I>. More, there are special types like <I><A name="index_6_30"></A>Invited Talks</I>, <I><A name="index_6_31"></A>BOFs</I> and the like.
+</P>
+
+
+<P>
+For each presentation type, there are speakers talking. Several speakers just hold one talk. Others provide lots of them.
+</P>
+
+
+<P>
+The point is that the talks can be easily categorized. Here is how PerlPointCD does it:
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+A conference has <A name="index_6_32"></A><CODE><A HREF="http://search.cpan.org/dist/Event" target="_blank">Event</A></CODE> types. Oops, this should read <I><A name="index_6_33"></A>event types</I>. ;-) (Internally, event types are refered as &quot;styles&quot;.)
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+There are <I>speakers</I> for each type of event.
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+Every speaker gives <I>talks</I>.
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+So the <A name="index_6_34"></A>hierarchy is <FONT COLOR=red><A name="index_6_35"></A>style - <A name="index_6_36"></A>author - <A name="index_6_37"></A>talk</FONT>. Pretty easy. And the <A name="index_6_38"></A>directory structure reflects it.
+</P>
+
+
+<P>
+For every hierarchy <A name="index_6_39"></A>level, the tool expects a corresponding directory level in the <B><CODE><A name="index_6_40"></A>data</CODE></B> subdirectory of <CODE><A name="index_6_41"></A>build</CODE>. So to organize the talks for the CD, just make the directories.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  Let's say we have two <I>Long Talks</I> by
+  <I>James Fletcher</I> about <I>&quot;The art
+  of presentation&quot;</I> and <I>&quot;Burning a CD&quot;</I>.
+  The second one is held together with his
+  wife <I>Jane</I>.
+
+  The corresponding directory structure is
+
+    Long_Talk/James_Fletcher/The_art_of_presentation
+    Long_Talk/James_Fletcher,_Jane_Fletcher/Burning_a_CD
+
+  in the build/data directory.</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+What about the underscores? They represent spaces. If the file system supports spaces in file names, spaces can be used directly as well (but it might make handling handier to stay with the underscores).
+</P>
+
+
+<P>
+<A name="index_6_42"></A>Please note how the Fletchers were combined in the authors directory name. The convention is to use a <A name="index_6_43"></A>comma and optional whitespaces around it.
+</P>
+
+
+<P>
+Working on a directory base makes it easy to <I>move</I> talks around.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  If Mr. Fletcher decides to give Tutorials
+  instead of Long Talks, all I have to do is
+  to move the <CODE>Fletcher</CODE> directories from
+  <I>Long_Talks</I> to <I>Tutorials</I>.</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+It's also easy to add or cancel events at any time during conference preparation.
+</P>
+
+
+<P>
+Now, I suggest to play around and add a few talks, aehm, directories. There is no need for contents - the directories will make a pretty nice CD frame.
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="jslide0012.htm#Integrating stuff">Integrating stuff</A>  </li>   <li>  <A HREF="jslide0036.htm#Directory order">Directory order</A>  </li> 
+</UL>
+
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0007.htm">04: Arrange the duties</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0005.htm">02: Directory structure</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0002.htm">Tutorials</a> / <a href="jslide0003.htm">The editor</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

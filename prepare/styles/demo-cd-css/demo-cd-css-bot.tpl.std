@@ -1,0 +1,36 @@
+
+<CENTER>
+ <TABLE bgcolor=yellow>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Weiter: <a href="URL_NEXT">TXT_NEXT</a>
+        &nbsp;&nbsp;Zur&uuml;ck: <a href="URL_PREV">TXT_PREV</a>
+        &nbsp;&nbsp;Inhalt: <a href="URL_CONTENTS">TXT_CONTENTS</a>
+
+        <I>PAGE_PATH</I>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+
+
+<TABLE bgcolor="#FFFF99" WIDTH="100%" border=0 CELLSPACING=0 CELLPADDING=2>
+<TR>
+ <TD bgcolor="#FFFF99" ALIGN=left border=0>
+    <a href="http://www.sourceforge.net/projects/perlpoint" border=0><image src="PPL13s5b-o.jpg" border=0 alt="PerlPoint powered"></a> 
+ </TD>
+ <TD bgcolor="#FFFF99" VALIGN=top ALIGN=right ><SMALL>
+    Copyright &copy; 
+    <a href="mailto:perl@jochen-stenzel.de">Jochen Stenzel, 2001-2004</a>.<BR>
+    All rights reserved.
+    </SMALL>
+ </TD>
+</TR>
+</TABLE>
+

@@ -1,0 +1,8 @@
+/* supplemental stylesheet to basic.css to link old browsers */
+
+.ahem { 
+  display: none;
+  height: 0;
+}
+
+/* end stylesheet */

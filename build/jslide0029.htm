@@ -1,0 +1,202 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0029.htm">
+  <link rel="prev"     href="jslide0028.htm">
+  <link rel="next"     href="jslide0030.htm">
+  <link rel="up"       href="jslide0028.htm">
+  <link rel="last"     href="jslide0052.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Archives</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0029.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+                    Next: <a href="jslide0030.htm">Author index</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0028.htm">Jochen Stenzel</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Archives">
+<center>
+<H1>Archives
+</H1></center>
+
+
+<P>
+<A name="index_29_184"></A>
+</P>
+
+
+<P>
+Having a CD of the current confenerence is great. Having a CD of the whole conference series is greater. Especially with <A HREF="jslide0031.htm#Automatic cross references">cross references</A> between the talks. Why not include previous years?
+</P>
+
+
+<P>
+PerlPointCD supports archives by treating a <A name="index_29_185"></A>type level directory <FONT COLOR=red><B>&quot;<A name="index_29_186"></A>Archive&quot;</B></FONT> special. It is handled as of a special type <FONT COLOR=red>&quot;archive&quot;</FONT>, holding directories of type <FONT COLOR=green>&quot;workshop&quot;</FONT><SUP><FONT SIZE=-2><A HREF="#workshop level hint">2</A></FONT></SUP>. Every <I><A name="index_29_187"></A>workshop level</I> directory is the root of a usual <A name="index_29_188"></A>directory structure as known for the current conference, containing type, author and talk directories.
+</P>
+
+
+<P>
+Keep cool. Here's a picture.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green>&lt;CD root - current conference&gt;</FONT>
+    |
+    |- Tutorials
+    |
+    |- Long_Talks
+    |
+    ...
+    |
+    |- <FONT COLOR=red>Archive</FONT>
+         |
+         |- <FONT COLOR=green>One_year_before</FONT>
+         |    |
+         |    |- Tutorials
+         |    |
+         |    |- Long_Talks
+         |    |
+         |    ...
+         |
+         |- <FONT COLOR=green>Two_years_before</FONT>
+         |    |
+         |    |- Tutorials
+         |    |
+         |    |- Long_Talks
+         |    |
+         |    ...
+         |
+         ...</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+Please note the green levels. Their substructures are absolutely equal. And this means that after having the CD sources of one year, this year can be archived by
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+making a new conference directory under &quot;Archive&quot;
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+and moving all the contents of the CD root directory into it. <SUP><FONT SIZE=-2><A HREF="#recursive archive move">3</A></FONT></SUP>
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+<HR>
+
+</P>
+
+
+<P>
+<small><A name="workshop level hint">2</A>: This could read &quot;conference&quot;, of course. But you know, this all started with the <I><A name="index_29_189"></A><A HREF="http://www.perlworkshop.de" target="_blank">German Perl Workshop</A></I> CDs ... And by the way, that's the reason to name this directory &quot;Archive&quot;, not &quot;Archives&quot;. It is wonderfully multilingual in this context.</small>
+</P>
+
+
+<P>
+<small><A name="recursive archive move">3</A>: Avoid to move &quot;Archive&quot;.</small>
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="jslide0006.htm#03: Setting up the Tracks">03: Setting up the Tracks</A>  </li>   <li>  <A HREF="jslide0035.htm#Defaults">Defaults</A>  </li>   <li>  <A HREF="jslide0036.htm#Directory order">Directory order</A>  </li> 
+</UL>
+
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0030.htm">Author index</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0028.htm">Jochen Stenzel</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

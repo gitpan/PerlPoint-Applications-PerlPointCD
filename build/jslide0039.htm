@@ -1,0 +1,178 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="jslide0029.htm">
+  <link rel="prev"     href="jslide0038.htm">
+  <link rel="next"     href="jslide0040.htm">
+  <link rel="up"       href="jslide0028.htm">
+  <link rel="last"     href="jslide0052.htm">
+  <link rel="contents" href="jslide0000.htm">
+  <link rel="index"    href="jslide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Import filters can be added</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "style.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/jslide0039.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+<!--
+  *** NAVIGATION BAR =================================================
+  $Revision: 1.1 $
+  $Date: 2001/06/14 12:00:56 $
+-->
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+        <I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+                    Next: <a href="jslide0040.htm">Index</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0038.htm">Highlight examples</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+
+<hr>
+<a name="Import filters can be added">
+<center>
+<H1>Import filters can be added
+</H1></center>
+
+
+<P>
+<A name="index_39_329"></A>
+</P>
+
+
+<P>
+Besides <A name="index_39_330"></A>PerlPoint, each source file can be provided in <A name="index_39_331"></A>POD as well. This feature is enabled by a PerlPoint <A name="index_39_332"></A>input filter, which can be compared to the <I><A name="index_39_333"></A>import filters</I> of usual applications.
+</P>
+
+
+<P>
+But this feature is not limited to POD - in fact, <I>any</I> <A name="index_39_334"></A><A name="index_39_335"></A>input format can be supported by <I><A name="index_39_336"></A>user defined import filters</I>. A PerlPointCD import filter for a certain <I>format</I> is a Perl file named <CODE><A name="index_39_337"></A>ifilter.&lt;format&gt;</CODE> in an <I><A name="index_39_338"></A>import filter directory</I>, defining a filter function <CODE><A name="index_39_339"></A>&lt;format&gt;2pp()</CODE>.
+</P>
+
+
+<P>
+Please note that formats are recognized by file extensions, so the <A name="index_39_340"></A>extension of a filter source file and the extensions of sources in the corresponding format need to be equal.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  ifilter.<FONT COLOR=red>pod</FONT> defines a filter
+  <FONT COLOR=red>pod</FONT>2pp for *.<FONT COLOR=red>pod</FONT> files.
+
+  ifilter.<FONT COLOR=blue>wi<B>K</B>i</FONT> defines a filter
+  <FONT COLOR=blue>wi<B>K</B>i</FONT>2pp for *.<FONT COLOR=blue>wi<B>K</B>i</FONT> files,
+  not *.wi<I>k</I>i files.</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+Writing a filter is easy: a filter function gets the source lines in an <I>array</I> <CODE><A name="index_39_341"></A>@main::_ifilterText</CODE> and supplies a PerlPoint <I>string</I>. See the distributed POD filter for an example.
+</P>
+
+
+<P>
+The <A name="index_39_342"></A>filter directory is set up by a <A name="index_39_343"></A>makefile <A name="index_39_344"></A>macro <FONT COLOR=red><CODE><A name="index_39_345"></A>IMPORTFILTERDIR</CODE></FONT>. A second macro, <FONT COLOR=red><CODE><A name="index_39_346"></A>IMPORTORDER</CODE></FONT>, specifies the search order for alternative formats.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green># set up import filters</FONT>
+  <FONT COLOR=red>IMPORTFILTERDIR</FONT>=PerlPointCD/ifilters
+  <FONT COLOR=red>IMPORTORDER</FONT>=pod twiki kwiki</FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="jslide0034.htm#Configure the make call">Configure the make call</A>  </li> 
+</UL>
+
+
+</P>
+<!--
+  *** BOTTOM NAVIGATION BAR =================================================
+-->
+
+<hr>
+
+<CENTER>
+ <TABLE>
+  <TR>
+    <TD colspan=3>
+     <CENTER>
+      <SMALL>
+                    Next: <a href="jslide0040.htm">Index</a>
+        &nbsp;&nbsp;Previous: <a href="jslide0038.htm">Highlight examples</a>
+        &nbsp;&nbsp;<a href="jslide0000.htm" target="Index">TOC</a>
+
+        <BR><I><A HREF="/index.html" TARGET=_top>Start</A> / <a href="jslide0027.htm">Lightning Talks</a> / <a href="jslide0028.htm">Jochen Stenzel</a></I><BR>
+
+      </SMALL>
+     </CENTER>
+    </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,145 @@
+
+
+# ----------------------------------------------
+#
+#    Implode or explode the DPWS-2003-CD-tree.
+#                 Version 0.01.
+#
+#            (c) Jochen Stenzel, 2003,
+#                all rights reserved.
+#
+#  See attached README file for usage details.
+#
+# ----------------------------------------------
+
+
+
+# pragmata
+use strict;
+use vars qw(@dirs);
+
+# load modules
+use Cwd;
+use File::Find;
+use File::Basename;
+
+
+# check current state, stop operation if it seems already to be performed
+die "[Error] Missing directory parameter.\n" unless $ARGV[0];
+die "[Error] Directory parameter is not valid.\n" unless -d $ARGV[0];
+die "[Error] The tree seems already to be imploded.\n" if $ARGV[1]  and -e ".imploded.flag";
+die "[Error] The tree seems not to be imploded.\n"     if !$ARGV[1] and !-e ".imploded.flag";
+
+# do the job
+process($ARGV[0]);
+process($_) for <$ARGV[0]/Archive/*>;
+
+# update hint if necessary
+open(I, ">.imploded.flag") or die $!     if $ARGV[1];
+unlink(".imploded.flag")   or die $! unless $ARGV[1];
+
+
+
+# SUBROUTINES ####
+
+# process a tree
+sub process
+ {
+  # check parameters
+  die unless @_;
+
+  # info
+  warn "[Info] Processing $_[0].\n";
+
+  # enter target dir
+  my $startdir=cwd;
+  chdir($_[0]) or die "[Fatal] Could not enter directory $_[0].\n";
+
+  # traverse subdirectories
+  foreach (<*>)
+    {
+     # skip certain dirs and all non-dirs
+     next if /^\.{1,2}$/ or /^Archive$/ or not -d;
+
+     # enter directory
+     my $startdir=cwd;
+     chdir($_) or die;
+
+     # traverse the tree to handle directories
+     find(\&collector, '.');
+
+     # now process the tree
+     $ARGV[1] ? implode() : explode();
+
+     # back to start directory
+     chdir($startdir) or die;
+
+     # cleanup data buffer
+     undef @dirs;
+    }
+
+  # back to start directory
+  chdir($startdir) or die;
+ }
+
+# a File::Find callback to collect the names of directories to handle
+sub collector
+ {
+  # declaration
+  my @buffer;
+
+  # store names of directories (except . and ..) in the first two dir levels
+  push(@dirs, $File::Find::name) if     $_!~/^\.{1,2}$/ 
+                                    and scalar(@buffer=$File::Find::name=~m((/))g)<=2
+                                    and -d;
+ }
+
+# implode all collected directories
+sub implode
+ {
+  # inits
+  my $c=0;
+
+  # process all directories
+  foreach (sort {length($b) <=> length($a)} @dirs)
+    {
+     # update counter
+     $c++;
+
+     # store a hint
+     open(F, ">$_/.dpwcddirhint") or die "[Fatal] Could not open $_/.dpwcddirhint: $!.\n";
+     print F basename($_);
+     close(F);
+
+     # now rename the directory
+     rename($_, join('/', dirname($_), "dpw2003-$c")) or die "$_ => dpw2003-$c: $!";
+    }
+ }
+
+# explode all collected directories
+sub explode
+ {
+  # process all directories
+  foreach (sort {length($b) <=> length($a)} @dirs)
+    {
+     my $hintfile="$_/.dpwcddirhint";
+
+     # hintfile?
+     next unless -e $hintfile;
+
+     # read the hint
+     open(F, $hintfile) or die;
+     my $org=<F>;
+     close(F);
+
+     # build new directory name, update hintfile name
+     my $newdirname=join('/', dirname($_), $org);
+     $hintfile="$newdirname/.dpwcddirhint";
+
+     # now rename the directory
+     rename($_, $newdirname) or die "$_ => $newdirname: $!";
+
+     # finally, remove the hint file
+     unlink($hintfile) or warn "Could not remove hint file $hintfile: $!.\n";
+    }
+ }

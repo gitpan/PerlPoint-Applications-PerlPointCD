@@ -1,0 +1,342 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- *** Created by pp2html, build 1.21 from PerlPoint-Converters 1.01  -->
+
+<HEAD>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <link rel="start"    href="slide0029.htm">
+  <link rel="prev"     href="slide0030.htm">
+  <link rel="next"     href="slide0032.htm">
+  <link rel="up"       href="slide0028.htm">
+  <link rel="last"     href="slide0052.htm">
+  <link rel="contents" href="slide0000.htm">
+  <link rel="index"    href="slide_idx.htm">
+  <meta name="author" content="cd@conference.org">
+  <meta name="description" content="PerlPointCD Demo">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+
+
+<TITLE>Automatic cross references</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="pstyle.css">
+
+<style type="text/css" media="all">
+  @import "ahem.css";
+  @import "pstyle.css";
+</style>
+
+</HEAD>
+
+
+<p>
+Check:
+<a href="http://validator.w3.org/check/referer">HTML validity</a>,
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validity</a>,
+<a href="http://validator.w3.org/checklink?uri=http://www.perl-workshop.de/slide0031.htm">links</a>.
+</p>
+
+<!-- ************************************************************** -->
+<BODY bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#AAAAAA" alink="#FF0000">
+
+<div id=top>
+<table border="0" cellspacing="2" cellpadding="0" width="100%">
+    
+  <tbody>
+
+    <tr>
+      <td width="200">
+        <a href="http://www.sourceforce.net/projects/perlpoint"><img src="images/PPL13s5b-o.jpg" border=0 alt="PerlPoint"></a>
+      </td>
+      <td align=center>PerlPointCD<br><i><A HREF="/index.html" TARGET=_top>Start</A> / <a href="slide0027.htm">Lightning Talks</a> / <a href="slide0028.htm">Jochen Stenzel</a></i></td>
+    </tr>
+
+  </tbody>
+
+</table>
+</div>
+
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+
+  <tbody>
+
+    <tr valign="bottom">
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr valign="top">
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr valign="bottom">
+    </tr>
+
+    <tr valign="top">
+
+    <td></td>
+    
+    <td></td>
+    
+    <td id=nav width="10%">
+
+ <table width=200>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td>&gt; <a href="slide0032.htm">Binary data</a></td></tr>
+  <tr><td>&lt; <a href="slide0030.htm">Author index</a></td></tr>
+  <tr><td>= <a href="slide0000.htm">TOC</a></td></tr>
+  <tr><td>&nbsp;</td></tr>
+ </table>
+
+<p class="ahem">You are using an old browser which doesn't fully support
+Cascading Style Sheets. This page will look <em>much</em> better in a browser that
+supports <a href="http://www.webstandards.org/upgrade/"target="_top"
+title="The Web Standards Project's BROWSER UPGRADE initiative.">web
+standards</a>.</p>
+
+<p class="ahem">&nbsp;</p>
+
+
+    </td>
+    
+    <td></td>
+    <td></td>
+
+    <td width="100%" colspan="4">
+
+      <div id=content>
+<a name="Automatic cross references">
+<center>
+<H1>Automatic cross references
+</H1></center>
+
+
+<P>
+<A name="index_31_196"></A>
+</P>
+
+
+<P>
+<A name="index_31_197"></A> In this demo, pages are crosslinked all over the site. This is done by explicit <A name="index_31_198"></A>links, and it works fine for all the pages provided by the CD team. But for the <I>talk pages</I>, this is no working approach - especially if there are <A HREF="slide0029.htm#Archives">archives</A>. Too much manual work, too many maintenance overhead in case of changes (which use to happen permanently), too much effort to scan and categorize all the abstracts and bios.
+</P>
+
+
+<P>
+But ... it <I>would</I> be nice to see which talks are <A name="index_31_199"></A>related. Can this be done <I>automatically</I>?
+</P>
+
+
+<P>
+It can! That's what <A name="index_31_200"></A>PerlPoint <A name="index_31_201"></A>index references were invented for. This is the base idea:
+</P>
+
+<UL>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+The list of <I><A name="index_31_202"></A>index entries</I> is a very <I>condensed, short description</I> of what themes the talk is about and related to.
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+Index entries (and <A name="index_31_203"></A>key phrase lists) are written by the <I><A name="index_31_204"></A>speakers</I> or their <A name="index_31_205"></A>custodians, who know well what the talks are about. So they will be <I>always up to date</I>.
+</TD></TR></TABLE>
+<TABLE><TR><TD valign="TOP"><IMG SRC="images/dot01.gif"></TD><TD>
+Finding pages with <A name="index_31_206"></A>matching index entries means finding articles that are probably related, with a really good probability.
+</TD></TR></TABLE>
+</UL>
+
+
+<P>
+So PerlPointCD produces <I><A name="index_31_207"></A>index based cross references</I>. They are added to a page whenever related pages were found, sorted in the order of match counts.
+</P>
+
+
+<P>
+There are three configuration settings controlling the search. They are accessible as <A name="index_31_208"></A><A name="index_31_209"></A><A HREF="slide0034.htm#Configure the make call">makefile macros</A> and default to values that produced good results.
+</P>
+
+
+<P>
+<B><U>Base search depth</U></B>
+</P>
+
+
+<P>
+There can be subchapters in a page we are searching related pages for. The start page has index entries, and the subchapters add probably more. Which number of subchapter levels should be taken into account when building our index entry base?
+</P>
+
+
+<P>
+Provide one of the keywords <CODE><A name="index_31_210"></A>startpage</CODE> or <CODE><A name="index_31_211"></A>full</CODE> to the <CODE><A name="index_31_212"></A>makefile</CODE> macro <CODE><A name="index_31_213"></A>INDEXREL_READDEPTH</CODE>.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green># include the start page only</FONT>
+  <FONT COLOR=red>INDEXREL_READDEPTH=startpage</FONT>
+
+  <FONT COLOR=green># include all subchapters</FONT>
+  <FONT COLOR=red>INDEXREL_READDEPTH=full</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+As it seems best to find a base of as much key phrases as possible, this setting defaults to <CODE>full</CODE>.
+</P>
+
+
+<P>
+<B><U>Related page search depth</U></B>
+</P>
+
+
+<P>
+Related pages might have subchapters as well. How many of their subchapter levels should be taken into account when searching for matches to the start page?
+</P>
+
+
+<P>
+Again, provide one of the keywords <CODE><A name="index_31_214"></A>startpage</CODE> or <CODE><A name="index_31_215"></A>full</CODE> to the <CODE><A name="index_31_216"></A>makefile</CODE> macro <CODE><A name="index_31_217"></A>INDEXREL_RELDEPTH</CODE>.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green># consider the he start page only</FONT>
+  <FONT COLOR=red>INDEXREL_RELDEPTH=1</FONT>
+
+  <FONT COLOR=green># scan all subchapters</FONT>
+  <FONT COLOR=red>INDEXREL_RELDEPTH=full</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+This setting defaults to <CODE>full</CODE> as well.
+</P>
+
+
+<P>
+<B><U>Threshold</U></B>
+</P>
+
+
+<P>
+Configured by the <CODE>makefile</CODE> macro <CODE><A name="index_31_218"></A>INDEXREL_THRESHOLD</CODE>, this setting controls which number or percentage of the start file index entries must be found on another page to call this other page related. Matches below this threshold are discarded.
+</P>
+
+
+<P>
+The setting can be made absolutely or by a percentage value, with <CODE>20%</CODE> as the default.
+</P>
+
+
+<P>
+<center>
+</P>
+
+
+<TABLE BORDER=0 CELLPADDING=5 WIDTH=80%><TR><TD bgcolor="#e5e5e5"><PRE>
+<FONT COLOR="#000000">
+  <FONT COLOR=green># skip everything below a threshold of 30%</FONT>
+  <FONT COLOR=red>INDEXREL_THRESHOLD=30%</FONT>
+
+  <FONT COLOR=green># require three matches at least</FONT>
+  <FONT COLOR=red>INDEXREL_THRESHOLD=3</FONT></FONT></PRE></TD></TR></TABLE>
+
+
+<P>
+</center>
+</P>
+
+
+<P>
+<center><I>To get really good results, <A HREF="slide0011.htm#Asking for materials">encourage your speakers</A> to make (lots of ;-)) index entries!</I></center>
+</P>
+
+
+<P>
+
+Index-related:
+
+
+<UL>
+  <li>  <A HREF="slide0034.htm#Configure the make call">Configure the make call</A>  </li> 
+</UL>
+
+
+</P>
+
+    </td>
+
+    <td></td>
+    
+</tr>
+
+<tr>
+    <td></td>
+    
+    <td></td>
+    
+    <td id=nav>
+
+    <span class=copy>
+      Copyright &copy; <a
+      href="mailto:perl@jochen-stenzel.de">Jochen Stenzel, 2001-2004</a>.
+      <br>
+      <span class=rights>All rights reserved.</span>
+    </span>
+
+    </td>
+
+</tr>
+
+<tr>
+
+    <td></td>
+    <td></td>
+
+    <td id=nav>
+
+    <span class=pp>
+      <br><a href="http://www.sourceforge.net/projects/perlpoint">PerlPoint</a> powered.
+    </span>
+
+    </td>
+
+    <td></td>
+    <td></td>
+    <td width="100%" colspan="4"></td>
+    <td></td>
+   
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+</div><!-- content -->
+</BODY>
+</HTML>

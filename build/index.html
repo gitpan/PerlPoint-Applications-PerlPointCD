@@ -1,0 +1,107 @@
+
+<!--- 
+
+ PerlPointCD manpage/demo CD startpage.
+
+ (c) 2003, 2004 Jochen Stenzel.
+
+ Important parts of the start page design, redirection techniques,
+ and the redirection applet, are courtesy of Juergen Christoffel.
+
+--->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+  <TITLE>PerlPointCD - a tool to produce conference CD's</TITLE>
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta name="author" content="perl@jochen-stenzel.de">
+  <meta name="description" content="PerlPointCD manpage and demo, startup page">
+  <meta name="MSSmartTagsPreventParsing" content="true">
+  <meta http-equiv="refresh" content="30; URL=index.htm">
+  <link REL="stylesheet" TYPE="text/css" HREF="pstyle.css">
+  <style type="text/css" media="all">@import "ahem.css";</style>
+</HEAD>
+
+<body bgcolor="white">
+
+<div id=top>
+  <!-- I></I -->
+  <table bgcolor="#FFCA00" WIDTH="100%"  BORDER=0 CELLSPACING=0>
+  <tr>
+    <td bgcolor="#FFCA00" valign=middle WIDTH="20%" >
+    </td>
+    <td align=center bgcolor="#FFCA00">
+       <h2>PerlPointCD - a tool to produce conference CD's</h2>
+    </td>
+    <td align=right WIDTH="20%" bgcolor="#FFCA00">
+    </td>
+  </tr>
+  </table>
+</div>
+
+<div id=nav>
+ <table>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td><b>Inhalt</b></td></tr>
+  <tr><td><a href="index.htm">HTML und CSS</a></td></tr>
+  <tr><td><a href="jindex.htm">Frames und Java</a></td></tr>
+  <tr><td>&nbsp;</td></tr>
+ </table>
+
+  <table>
+  <tr><td><b>Xrefs</b></td></tr>
+  <tr><td><a href="http://www.sourceforge.net/projects/perlpoint">PerlPointCD</a></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  </table>
+
+  <table style="position: relative; bottom: 0;">
+  <tr><td><b>Validation</b></td></tr>
+  <tr><td><a href=
+    "http://jigsaw.w3.org/css-validator/check/referer">CSS</a></td></tr> 
+  <tr><td><a href="http://validator.w3.org/check/referer">HTML</a></td></tr>
+  <tr><td>&nbsp;</td></tr>
+  </table>
+ 
+</div>
+
+<div id=content>
+
+<P>This site offers navigation with <A HREF="jindex.htm">Java and
+frames</A> and with <A HREF="index.htm">pure HTML and CSS</A>.
+Please make your choice. If you don't make a choice, you will be redirected
+to the Java and Frames version after 60 seconds if you have Java
+enabled.</p>
+
+<p class="ahem">P.S. You are using an old browser which doesn't fully
+support Cascading Style Sheets. This site will look <em>much</em> better in
+a browser that supports <a href="http://www.webstandards.org/upgrade/"
+target="_top" title="The Web Standards Project's BROWSER UPGRADE
+initiative.">web standards</a>, but its content is accessible to any
+browser or Internet device. </p>
+
+<p>
+<applet code="Redirect.class" width="1" height="1">
+  <param name="href"  value="jindex.htm" />
+  <param name="after" value="20000" />
+</applet>
+</p>
+
+</div>
+
+<div id=footer>
+  <div class=copy>
+  Copyright &copy; <a
+  href="mailto:perl@jochen-stenzel.de">Jochen Stenzel</a>, 2001-2004. <span class=rights>All rights reserved.</span>
+  </div>
+  <div class=pp> This site is generated with <a
+  href="http://www.sourceforge.net/projects/perlpoint">PerlPoint</a>
+  </div>
+</div>
+
+</body>
+</html>
